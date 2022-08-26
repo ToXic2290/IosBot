@@ -273,14 +273,11 @@ Site = http://gg.gg/Toxicuse""")
 @bot.message_handler(commands=['send'])
 def notify(message):
     command_sender = message.from_user.id
-    if command_sender in admins:
-        with open(r'id.txt') as ids:
-            for line in ids:
-                user_id = int(line.strip("\n"))
-                try:
-                    bot.send_message(user_id,  f'уведомление от {command_sender}')
-                except Exception as e:
-                    bot.send_message(command_sender, f'ошибка отправки сообщения юзеру - {user_id}')
+    if command_sender in id.ADMIN:
+        try:
+            bot.send_message(user_id,  f'уведомление от {command_sender}')
+        except Exception as e:
+            bot.send_message(command_sender, f'ошибка отправки сообщения юзеру - {user_id}')
     else:
         bot.send_message(command_sender, f'у вас нет прав для запуска команды')
         
