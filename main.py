@@ -274,7 +274,7 @@ Site = http://gg.gg/Toxicuse""")
 def notify(message):
     command_sender = message.from_user.id
     if command_sender in admins:
-        with open(r'C:\id.txt') as ids:
+        with open(r'id.txt') as ids:
             for line in ids:
                 user_id = int(line.strip("\n"))
                 try:
