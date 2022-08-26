@@ -2,7 +2,7 @@ import time
 from time import sleep
 import telebot
 from telebot import types # для указание типов
-
+import id
 
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
 admins = [1484386024, 5184725450]
