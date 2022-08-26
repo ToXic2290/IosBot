@@ -66,7 +66,6 @@ def start(message):
     btn8 = types.KeyboardButton("😍 Status Bar 😍")
     btn9 = types.KeyboardButton("🔢 Calculator 🔢")
     btn10 = types.KeyboardButton("📷 Camera 📷")
-    btn11 = types.KeyboardButton("🔎 App Store 🔎")
     btn13 = types.KeyboardButton("⚒ Инфо 🛠")
     btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
     btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
@@ -79,7 +78,7 @@ def start(message):
     btn22 = types.KeyboardButton("📒 Notes 📒")
     btn23 = types.KeyboardButton("📩 Notifications  📩")
     btn25 = types.KeyboardButton("❤️‍🔥 WhatsApp ❤️‍🔥")
-    markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn11, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
+    markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
     markup.add(btn13)
     bot.send_message(message.chat.id, text='''Выбери любое приложение из списка ниже'''.format(message.from_user), reply_markup=markup)
 
@@ -87,108 +86,47 @@ def start(message):
 @bot.message_handler(content_types=['text'])
 def func(message):
     if(message.text == "❤️‍🔥 WhatsApp ❤️‍🔥"):
-        bot.send_document(message.chat.id, whatsapp)
-        
+        bot.send_document(message.chat.id, whatsapp)     
     elif(message.text == "😈 VK 😈"):
-        bot.send_document(message.chat.id, vk, caption=caption.vkd)
-        
+        bot.send_document(message.chat.id, vk, caption=caption.vkd)        
     elif(message.text == '📷 Instagram 📷'):
-        bot.send_document(message.chat.id, inst, caption="""📷 Instander — крутой и функциональный мод на официальную версию инстаграм с множеством крутым функций.
-🔹 Преимущества:
-- Нечиталка
-- Неписалка
-- Скрыть просмотр сторис
-- Скрыть просмотр трансляций
-- Скачивание публикаций, сторисов, reels
-- Улучшение качество фотографий
-- и так далее...""")
-        
+        bot.send_document(message.chat.id, inst, caption=captiom.instd)        
     elif(message.text == "🛩 TG 🛩"):
-        bot.send_document(message.chat.id, tg, caption="""✈️ Ibreym-Telegram — долгожданный мод на телеграм, оптимизированный и улучшенный мною, в котором шикарный дизайн, и русский язык.
-🔷 Преимущества:
-— Возможность менять шрифты, выбирать разные темы и цвета, красивый, и удобный ios дизайн.
-— На русском языке.
-— Без рекламы.
-— Добавлены IOS смайлы
-и т.д.""")
-        
+        bot.send_document(message.chat.id, tg, caption=caption.tgd)
     elif(message.text == "🎶 Spotify 🎶"):
-        bot.send_document(message.chat.id, spotify, caption='''🎵 Spotify 8.7.2.1205 - Интернет-сервис потокового аудио, позволяющий легально и бесплатно прослушивать более 50 миллионов музыкальных композиций, аудиокниг и подкастов.
-🔹 Преимущества:
-* Разблокировано очень высокое качество звука
-* Разлочен импорт ваших музыкальных файлов
-* Неограниченное перемешивание
-* Разблокирован Spotify Connect
-* Режим повтора
-* Отключена реклама
-* Некоторые функции на стороне сервера все же требуют платной подписки.''')
-        
+        bot.send_document(message.chat.id, spotify, caption=caption.spd)
     elif(message.text == "🏠 Launcher 🏠"):
-        bot.send_document(message.chat.id, launcher, caption="""🔥Apple Launcher  — приложение с помощью которого вы можете превратить свой рабочий стол андроида в айфон. Меняет иконки, стиль, запись экрана на ios.""")
-
+        bot.send_document(message.chat.id, launcher, caption=caption.ld)
     elif(message.text == "🎵 TikTok 🎵"):
-        bot.send_document(message.chat.id, tt, caption="""🎵 Tik-Tok. Крупное приложение с огромным количеством коротких но позитивных видео.
-🔹 Преимущества
-* Можно скачивать любые видео без водяных знаков.
-* Айфоновские смайлы
-* Улучшено качество видео
-* Требует меньше трафика
-* и так далее...""")
-        
+        bot.send_document(message.chat.id, tt, caption=caption.ttd)
     elif(message.text == "🕙 Clock 🕙"):
-        bot.send_document(message.chat.id, clock, caption="""🕙 Clock
-Будильник, таймер, секундомер и просто часы как на айфоне.
-🔹 Преимущества:
-* Удалена реклама.
-* Удалено лишнее.
-* Тёмные и светлые темы.
-* Оригинальное название, иконка.
-* И другое...""")
-        
+        bot.send_document(message.chat.id, clock, caption=caption.cld)
     elif(message.text == "😍 Status Bar 😍"):
-        bot.send_document(message.chat.id, statusbar, caption="""🔥Ibreym-Status-Bar — айфоновский статус бар на любой андроид, с крутыми фишками и настройками, который также кстати перекрывает ваш обычный бар андроида.""")
-    
-    elif(message.text == "🔎 App Store 🔎"):
-        bot.send_document(message.chat.id, appstore, caption="""🔥Ibreym-Status-Bar — айфоновский статус бар на любой андроид, с крутыми фишками и настройками, который также кстати перекрывает ваш обычный бар андроида.""")
-    
+        bot.send_document(message.chat.id, statusbar, caption=caption.sbd)
     elif(message.text == "📷 Camera 📷"):
-        bot.send_document(message.chat.id, camera, caption="""🔥Ibreym-Status-Bar — айфоновский статус бар на любой андроид, с крутыми фишками и настройками, который также кстати перекрывает ваш обычный бар андроида.""")
-    
+        bot.send_document(message.chat.id, camera, caption=caption.cad)
     elif(message.text == "🔢 Calculator 🔢"):
-        bot.send_document(message.chat.id, calc, caption="""🚀iCalculator PRO — это калькулятор в стиле ios на андроид с различными функциями, возможностями и с поддержкой темной и светлой темы.""")
-    
+        bot.send_document(message.chat.id, calc, caption=caption.calcd)
     elif(message.text == "🖼️ Gallery 🖼️"):
-        bot.send_document(message.chat.id, gallery, caption="""🔥iPhoto — ещё одна красивая и удобная галерея в стиле ios на android. С ios дизайн, шрифтом и с открытой pro версией. Доступна тёмная тема, корзина и возможность скрыть файлы.""")
-    
+        bot.send_document(message.chat.id, gallery, caption=caption.gald)
     elif(message.text == "🎤 Диктофон 🎤"):
-        bot.send_document(message.chat.id, voice, caption="""🚀iVoice Pro — диктофон в стиле ios в полным дизайном и функционалом iphone на android. Доступны тёмная и светлая тема, выбор качества и полная версия без рекламы.""")
-    
+        bot.send_document(message.chat.id, voice, caption=caption.voiced)
     elif(message.text == "📆 Календарь 📆"):
-        bot.send_document(message.chat.id, clnd, caption="""📆 iCalendar Pro — календарь с интерфейсом в стиле ios на ваш android. Поддержка темной и светлой темы, выбор формата времени, напоминания и прочее.""")
-    
+        bot.send_document(message.chat.id, clnd, caption=caption.clndd)
     elif(message.text == "💭 Messages 💭"):
-        bot.send_document(message.chat.id, msg, caption="""🔥iMessage Pro — если вам наскучил обычный дизайн ваших сообщений, это приложение для вас! Это сообщения в стиле ios с разными темами и красивейшим ios дизайном.""")
-    
+        bot.send_document(message.chat.id, msg, caption=caption.msgd)
     elif(message.text == "🙍‍♂️ Контакты 🙍‍♂️"):
-        bot.send_document(message.chat.id, contacts, caption="""🚀iContacts Pro — это крутая прога, контакты в стиле ios на android, дизайн ios, доступны темная, светлая, или авто темы и прочее, без рекламы.""")
-    
+        bot.send_document(message.chat.id, contacts, caption=caption.cntd)
     elif(message.text == "📞 Call 📞"):
-        bot.send_document(message.chat.id, call, caption="""🔥iCallScreen Pro — если вам надоел обычный экран звонков на вашем телефоне, данное приложение поможет изменить экран звонка на стиль ios""")
-    
+        bot.send_document(message.chat.id, call, caption=caption.calld)
     elif(message.text == "🎧 Music 🎧"):
-        bot.send_document(message.chat.id, music, caption="""🚀Музыкальный плеер ios на android.
-iMusic —  отличная замена для вашего обычного музыкального плеера на плеер с красивым стилем ios. С поддержкой темных и светлых тем, и другими функциями.""")
-    
+        bot.send_document(message.chat.id, music, caption=caption.msd)
     elif(message.text == "⌨️ Keyboard ⌨️"):
-        bot.send_document(message.chat.id, kb, caption="""🔥Ibreym Keyboard - удобная клавиатура как на айфоне на ваш androd. В приложении 4 разных тем, русский язык и ios смайлы.""")
-    
+        bot.send_document(message.chat.id, kb, caption=caption.kbd)
     elif(message.text == "📒 Notes 📒"):
-        bot.send_document(message.chat.id, notes, caption="""🔥iNotes — это приложение для создания заметок в стиле ios на android с ios 14.5 эмоджи! Отлично работает, поддерживает чёрную, и светлую тему, а также для вас открыта полная версия.""")
-    
+        bot.send_document(message.chat.id, notes, caption=caption.ntd)
     elif(message.text == "📩 Notifications  📩"):
-        bot.send_document(message.chat.id, notify, caption="🔥Floatify — приложение для настройки уведомлений на вашем андроид устройстве как на айфоне, где можно выбрать три разных версий ios, а также настроить по своему усмотрению.")
-
-
+        bot.send_document(message.chat.id, notify, caption=caption.ntf)
 
 
 
@@ -224,7 +162,6 @@ iMusic —  отличная замена для вашего обычного �
         btn8 = types.KeyboardButton("😍 Status Bar 😍")
         btn9 = types.KeyboardButton("🔢 Calculator 🔢")
         btn10 = types.KeyboardButton("📷 Camera 📷")
-        btn11 = types.KeyboardButton("🔎 App Store 🔎")
         btn13 = types.KeyboardButton("⚒ Инфо 🛠")
         btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
         btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
@@ -237,7 +174,7 @@ iMusic —  отличная замена для вашего обычного �
         btn22 = types.KeyboardButton("📒 Notes 📒")
         btn23 = types.KeyboardButton("📩 Notifications  📩")
         btn25 = types.KeyboardButton("❤️‍🔥 WhatsApp ❤️‍🔥")
-        markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn11, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
+        markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
         markup.add(btn13)
         bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню произошел успешно 😊'''.format(message.from_user), reply_markup=markup)
     else:
