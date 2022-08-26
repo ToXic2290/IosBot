@@ -12,3 +12,5 @@ def func(message):
     bot.send_document(message.chat.id, "⚙️ Бот на перезагрузке...")
   else:
     bot.send_document(message.chat.id, "⚙️ Бот на перезагрузке...")
+
+bot.infinity_polling()
