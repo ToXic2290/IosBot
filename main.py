@@ -6,8 +6,6 @@ import caption
 
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
 
-
-
 whatsapp = 'BQACAgIAAxkBAAIBI2KiW-yxnpb2zbjXMIvDnFgiXbF0AAIaGgAC4fsISOMCXlTV1I1kJAQ' # Да
 vk = 'BQACAgIAAxkBAANCYp-mYHCEN97WIzNKS3mt1hwxaJgAAokWAAI6g8BLar1MgfTpyGckBA' # Да
 inst = 'BQACAgIAAxkBAANGYp-oRy9oMeccSPnrT2s2eDqO3FsAAj4PAAKnHMFKdM6RbZm5CCIkBA' # Да
@@ -30,10 +28,6 @@ music = "BQACAgIAAxkBAAIBHmKiWuj9fmGA3Jk5Lvqa_VIDFHkpAAJ1EAACWMBQS0MMzkrmzwX-JAQ
 kb = "BQACAgIAAxkBAAIBH2KiWw_CqPeAkVABaO47gd6PjldLAAIpFAAC6UlQSQm9ntnXvwlrJAQ" #
 notes = "BQACAgIAAxkBAAIBIGKiWzYkuGOggwk4q6CZA9YXFKu_AAJBFQACXd3xStgQmC0scGyBJAQ" #
 notify = "BQACAgIAAxkBAAIBIWKiW2jdp7iJzj4AAY-XwFriknLXuQACKhYAAl3d8UrboeWRu3ovsiQE" #
-
-
-
-
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -63,7 +57,6 @@ def start(message):
     markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
     markup.add(btn13)
     bot.send_message(message.chat.id, text='''Выбери любое приложение из списка ниже'''.format(message.from_user), reply_markup=markup)
-
 
 @bot.message_handler(content_types=['text'])
 def func(message):
@@ -111,11 +104,6 @@ def func(message):
         bot.send_document(message.chat.id, notify, caption=caption.ntf)
 
 
-
-
-
-
-        # Доп кнопки
     elif(message.text == "⚒ Инфо 🛠"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("🫠 Биография")
@@ -124,7 +112,6 @@ def func(message):
         back = types.KeyboardButton("⛺️ Домой")
         markup.add(btn1, btn3, btn4, back)
         bot.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
-
 
     elif(message.text == "🫠 Биография"):
         bot.send_message(message.chat.id, caption.bio)
@@ -161,9 +148,5 @@ def func(message):
         bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню произошел успешно 😊'''.format(message.from_user), reply_markup=markup)
     else:
         bot.send_message(message.chat.id, text="😔 Простите, но.. я не знаю что вам ответить на это...")
-
-
-        
-         
-        
+       
 bot.infinity_polling()
