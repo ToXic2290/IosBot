@@ -2,10 +2,10 @@ import time
 from time import sleep
 import telebot
 from telebot import types # для указание типов
-import id
+
 
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
-admins = [1484386024, 5184725450]
+
 
 
 whatsapp = 'BQACAgIAAxkBAAIBI2KiW-yxnpb2zbjXMIvDnFgiXbF0AAIaGgAC4fsISOMCXlTV1I1kJAQ' # Да
@@ -269,17 +269,6 @@ Site = http://gg.gg/Toxicuse""")
 
 
         
-        
-@bot.message_handler(commands=['send'])
-def notify(message):
-    command_sender = message.from_user.id
-    if command_sender in id.ADMIN:
-        try:
-            bot.send_message(user_id,  f'уведомление от {command_sender}')
-        except Exception as e:
-            bot.send_message(command_sender, f'ошибка отправки сообщения юзеру - {user_id}')
-    else:
-        bot.send_message(command_sender, f'у вас нет прав для запуска команды')
-        
+         
         
 bot.infinity_polling()
