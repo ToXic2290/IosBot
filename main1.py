@@ -31,6 +31,26 @@ kb = "BQACAgIAAxkBAAIBH2KiWw_CqPeAkVABaO47gd6PjldLAAIpFAAC6UlQSQm9ntnXvwlrJAQ" #
 notes = "BQACAgIAAxkBAAIBIGKiWzYkuGOggwk4q6CZA9YXFKu_AAJBFQACXd3xStgQmC0scGyBJAQ" #
 notify = "BQACAgIAAxkBAAIBIWKiW2jdp7iJzj4AAY-XwFriknLXuQACKhYAAl3d8UrboeWRu3ovsiQE" #
 
+# Данные
+bio = """🙃 Мини биография обо мне:
+Псевдоним, а так-же мое имя во вселенной телеграма - Токсик
+Настоящее имя скрываю :(
+
+👾 Из увлечений могу скзаать только, что увлекаюсь написанием различных скриптов, модулей для юзерботов (Хикка в основном), изучаю основы создания игр 🤭
+
+😮‍💨 Чаще всего обитаю в чатах Хакерфона ( @HPV_HOME ), поддержки Хикки ( @hikka_talks ) или в чате своего канала ( @AstroModulesChat )
+
+🫠 Писать мне в лс не советую, но если все же хотите что-то спросить, посоветовать или пообщаться то пишите "С бота", чтобы бот вас пропустил - @ToXicUse"""
+
+soc = """🔍  Все соц. сети создателя бота находятся ниже 🔎
+    💎 —————> https://t.me/TxSocial <—————— 💎"""
+
+donate = """🙁 В связи с ситуацией в Украине, раздел "Донат" временно отключен. Спасибо за понимание.
+
+#stopwar #nowar"""
+
+
+
 
 
 @bot.message_handler(commands=['start'])
@@ -47,7 +67,6 @@ def start(message):
     btn9 = types.KeyboardButton("🔢 Calculator 🔢")
     btn10 = types.KeyboardButton("📷 Camera 📷")
     btn11 = types.KeyboardButton("🔎 App Store 🔎")
-    btn12 = types.KeyboardButton("⁤⁤ ")
     btn13 = types.KeyboardButton("Инфо")
     btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
     btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
@@ -60,8 +79,8 @@ def start(message):
     btn22 = types.KeyboardButton("📒 Notes 📒")
     btn23 = types.KeyboardButton("📩 Notifications  📩")
     btn25 = types.KeyboardButton("❤️‍🔥 WhatsApp ❤️‍🔥")
-    btn26 = types.KeyboardButton(" ⁤")
-    markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn11, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn26, btn23,  btn12,  btn13)
+    markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn11, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
+    markup.add(btn13)
     bot.send_message(message.chat.id, text='''Выбери любое приложение из списка ниже'''.format(message.from_user), reply_markup=markup)
 
 
@@ -207,35 +226,23 @@ iMusic —  отличная замена для вашего обычного �
 
 
         # Доп кнопки
-    elif(message.text == "Инфо"):
+    elif(message.text == "⚒ Инфо 🛠"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton("Создатель")
-        btn2 = types.KeyboardButton("Канал создателя")
-        btn3 = types.KeyboardButton("Соц. сети автора")
-        btn4 = types.KeyboardButton("Донат")
-        back = types.KeyboardButton("Вернуться в главное меню")
+        btn1 = types.KeyboardButton("🫠 Биография")
+        btn3 = types.KeyboardButton("🔗 Социальные сети")
+        btn4 = types.KeyboardButton("💸 Донат")
+        back = types.KeyboardButton("⛺️ Домой")
         markup.add(btn1, btn2, btn3, btn4, back)
-        bot.send_message(message.chat.id, text="Информация о создателе", reply_markup=markup)
+        bot.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
 
 
-
-
-    elif(message.text == "Создатель"):
-        bot.send_message(message.chat.id, "Привет! Я Токсик. Такой-же простой паренёк как и вы. \nМне 16 лет. Некоторые из моих увлечений: \n* Создание ботов \n* Создание сайтов \n* Скрипты \n* Модули для юзерботов \n* и многое другое. \n\n Работаю на языке программирования 'Python', и частично изучаю HTML. \nСвязаться со мной вы можете нажав на кнопку 'Соц. сети автора'.  \n\n С уважением, Токсик")
-    elif message.text == "Канал создателя":
-        bot.send_message(message.chat.id, text="Я являюсь админом такого проекта как ХакерФон (@HACKER_PHONE_VIP) Можешь зайти туда и пообщаться со мной и с другими добрыми людьми как и я.")
-    elif message.text == "Донат":
-        bot.send_message(message.chat.id, "Хочешь задонатить Токсику или просто скинуть рубль на киви? \nЯ не такой человек чтобы выпрашивать, поэтому ссылку ставить не буду. \nНо если все-таки есть желание сделать мне приятнее, то вот ник киви: TOXIC2290")
-    elif message.text == "Соц. сети автора":
-        bot.send_message(message.chat.id, text="""
-✨ Все соц. сети автора:
-VK = https://vk.com/toxyy
-TG = https://t.me/ToXicUse
-TG (2) = https://t.me/SecureTox
-Discord = https://discord.gg/kBUcfepVHq
-Instagram = https://instagram.com/zxctoxicuse
-Site = http://gg.gg/Toxicuse""")
-    elif (message.text == "Вернуться в главное меню"):
+    elif(message.text == "🫠 Биография"):
+        bot.send_message(message.chat.id, bio)
+    elif message.text == "💸 Донат":
+        bot.send_message(message.chat.id, donate)
+    elif message.text == "🔗 Социальные сети":
+        bot.send_message(message.chat.id, soc)
+    elif (message.text == "⛺️ Домой"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("😈 VK 😈")
         btn2 = types.KeyboardButton("🛩 TG 🛩")
@@ -248,7 +255,6 @@ Site = http://gg.gg/Toxicuse""")
         btn9 = types.KeyboardButton("🔢 Calculator 🔢")
         btn10 = types.KeyboardButton("📷 Camera 📷")
         btn11 = types.KeyboardButton("🔎 App Store 🔎")
-        btn12 = types.KeyboardButton("⁤⁤ ")
         btn13 = types.KeyboardButton("Инфо")
         btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
         btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
@@ -261,11 +267,11 @@ Site = http://gg.gg/Toxicuse""")
         btn22 = types.KeyboardButton("📒 Notes 📒")
         btn23 = types.KeyboardButton("📩 Notifications  📩")
         btn25 = types.KeyboardButton("❤️‍🔥 WhatsApp ❤️‍🔥")
-        btn26 = types.KeyboardButton(" ⁤")
-        markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn11, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn26, btn23, btn12,  btn13)
-        bot.send_message(message.chat.id, text='''Вы в главном меню'''.format(message.from_user), reply_markup=markup)
+        markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn11, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
+        markup.add(btn13)
+        bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню произошел успешно 😊'''.format(message.from_user), reply_markup=markup)
     else:
-        bot.send_message(message.chat.id, text="К сожалению, я не знаю что вам на это ответить:(")
+        bot.send_message(message.chat.id, text="😔 Простите, но.. я не знаю что вам ответить на это...")
 
 
         
