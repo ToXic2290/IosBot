@@ -31,24 +31,6 @@ kb = "BQACAgIAAxkBAAIBH2KiWw_CqPeAkVABaO47gd6PjldLAAIpFAAC6UlQSQm9ntnXvwlrJAQ" #
 notes = "BQACAgIAAxkBAAIBIGKiWzYkuGOggwk4q6CZA9YXFKu_AAJBFQACXd3xStgQmC0scGyBJAQ" #
 notify = "BQACAgIAAxkBAAIBIWKiW2jdp7iJzj4AAY-XwFriknLXuQACKhYAAl3d8UrboeWRu3ovsiQE" #
 
-# Данные
-bio = """🙃 Мини биография обо мне:
-Псевдоним, а так-же мое имя во вселенной телеграма - Токсик
-Настоящее имя скрываю :(
-
-👾 Из увлечений могу скзаать только, что увлекаюсь написанием различных скриптов, модулей для юзерботов (Хикка в основном), изучаю основы создания игр 🤭
-
-😮‍💨 Чаще всего обитаю в чатах Хакерфона ( @HPV_HOME ), поддержки Хикки ( @hikka_talks ) или в чате своего канала ( @AstroModulesChat )
-
-🫠 Писать мне в лс не советую, но если все же хотите что-то спросить, посоветовать или пообщаться то пишите "С бота", чтобы бот вас пропустил - @ToXicUse"""
-
-soc = """🔍  Все соц. сети создателя бота находятся ниже 🔎
-    💎 —————> https://t.me/TxSocial <—————— 💎"""
-
-donate = """🙁 В связи с ситуацией в Украине, раздел "Донат" временно отключен. Спасибо за понимание.
-
-#stopwar #nowar"""
-
 
 
 
@@ -145,11 +127,11 @@ def func(message):
 
 
     elif(message.text == "🫠 Биография"):
-        bot.send_message(message.chat.id, bio)
+        bot.send_message(message.chat.id, caption.bio)
     elif message.text == "💸 Донат":
-        bot.send_message(message.chat.id, donate)
+        bot.send_message(message.chat.id, caption.donate)
     elif message.text == "🔗 Социальные сети":
-        bot.send_message(message.chat.id, soc)
+        bot.send_message(message.chat.id, caption.soc)
     elif (message.text == "⛺️ Домой"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("😈 VK 😈")
