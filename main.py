@@ -90,7 +90,7 @@ def func(message):
     elif(message.text == "😈 VK 😈"):
         bot.send_document(message.chat.id, vk, caption=caption.vkd)        
     elif(message.text == '📷 Instagram 📷'):
-        bot.send_document(message.chat.id, inst, caption=captiom.instd)        
+        bot.send_document(message.chat.id, inst, caption=caption.instd)        
     elif(message.text == "🛩 TG 🛩"):
         bot.send_document(message.chat.id, tg, caption=caption.tgd)
     elif(message.text == "🎶 Spotify 🎶"):
