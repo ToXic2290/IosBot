@@ -4,8 +4,16 @@ import telebot
 from telebot import types # для указание типов
 import caption
 import files
+import sqlite3
 
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
+
+conn = sqlite3.connect('db/database.db', check_same_thread=False)
+cursor = conn.cursor()
+
+def db_table_val(user_id: int, user_name: str, user_surname: str, username: str):
+    cursor.execute('INSERT INTO test (user_id, user_name, user_surname, username) VALUES (?, ?, ?, ?)', (user_id, user_name, user_surname, username))
+    conn.commit()
 
 
 @bot.message_handler(commands=['start'])
@@ -38,6 +46,15 @@ def start(message):
     bot.send_message(message.chat.id, text='''🙃 Приветствую дорогой пользователь.
 Выбери понравившейся приложение ниже'''.format(message.from_user), reply_markup=markup)
 
+
+    us_id = message.from_user.id
+        us_name = message.from_user.first_name
+        us_sname = message.from_user.last_name
+        username = message.from_user.username
+        
+        db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
+
+        
 @bot.message_handler(content_types=['text'])
 def func(message):
     if(message.text == "❤️‍🔥 WhatsApp ❤️‍🔥"):
