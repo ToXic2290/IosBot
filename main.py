@@ -7,27 +7,6 @@ import files
 
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
 
-whatsapp = 'BQACAgIAAxkBAAIBI2KiW-yxnpb2zbjXMIvDnFgiXbF0AAIaGgAC4fsISOMCXlTV1I1kJAQ' # Да
-vk = 'BQACAgIAAxkBAANCYp-mYHCEN97WIzNKS3mt1hwxaJgAAokWAAI6g8BLar1MgfTpyGckBA' # Да
-inst = 'BQACAgIAAxkBAANGYp-oRy9oMeccSPnrT2s2eDqO3FsAAj4PAAKnHMFKdM6RbZm5CCIkBA' # Да
-tg = 'BQACAgIAAxkBAANEYp-m4B1puElbayEIDimXbQ7F5DEAAnYWAAL1GfhIzFScEUu08-IkBA' # Да
-spotify = 'BQACAgIAAxkBAANKYp-q3AGtad0CFXhr6RGEKvyWHqoAAtcTAAImGzlI5TkFAAGoZIGLJAQ' # Да
-launcher = 'BQACAgIAAxkBAANIYp-pVuyMYdiokBuGhsRgmIv0l50AArAYAAI_2CBJuDsrno8T6tQkBA' # Да
-tt = 'BQACAgIAAxkBAANFYp-njX1ODzAtoXOP-e8NVR9naswAAmwaAALxI9BL68qKNbjPIsAkBA' # Да
-clock = 'BQACAgIAAxkBAANJYp-qLsE-uO0RnDSJNXLJHNDK9NUAAsIQAAJOfqFKOZK_7-PbScgkBA' # Да
-statusbar = "BQACAgIAAxkBAANLYp-rMvPHMssxDcDMhetxJ24yXgQAAhMWAAKj7_hKjcI5Ih1QQgEkBA" # Да
-appstore = "BQACAgIAAxkBAANMYp-r_ggDlWenMLol80kAAWXoOKZJAAIbFQACs5MYS4zhiTNbm2CeJAQ" # Да
-camera = "BQACAgIAAxkBAAIBFmKiWT8x36HCM0VKfxprarmQt-t3AAKbEAACWMBQS9u6w1rrI2nHJAQ" #
-calc = "BQACAgIAAxkBAAIBF2KiWX2hq-kCv3FTzdYqOItlBqc8AAKZEAACWMBQSxO4Z8bUrVQ5JAQ" #
-gallery = "BQACAgIAAxkBAAIBGGKiWa80fR-E5rw_aViuOC74LwPMAAKUEgACGQzgSFqCSCIKi1viJAQ" #
-voice = "BQACAgIAAxkBAAIBGWKiWeefty-cWuLaSpbTE_fUHN_rAAKsEAACC2NISgW6RS4nkZObJAQ" #
-clnd = "BQACAgIAAxkBAAIBGmKiWjBswZUdQJZXy1nki9qeVEXRAAJ3EAACWMBQS1CMCweO3yr_JAQ" #
-msg = "BQACAgIAAxkBAAIBG2KiWmCpGEKZrQR6XjxDPXxKDnYLAAJCGAACZUwhSmU5Vfo4r8BnJAQ" #
-contacts = "BQACAgIAAxkBAAIBHGKiWqjDrtklS3NUgkFjEyzMNHkIAAJ0EAACWMBQS-oVQtRii4DhJAQ" #
-call = "BQACAgIAAxkBAAIBHWKiWsVehg34DAh8J2X-9uUbgt_PAAKSEgACGQzgSF3rSxfM7jWYJAQ" #
-music = "BQACAgIAAxkBAAIBHmKiWuj9fmGA3Jk5Lvqa_VIDFHkpAAJ1EAACWMBQS0MMzkrmzwX-JAQ" #
-kb = "BQACAgIAAxkBAAIBH2KiWw_CqPeAkVABaO47gd6PjldLAAIpFAAC6UlQSQm9ntnXvwlrJAQ" #
-notes = "BQACAgIAAxkBAAIBIGKiWzYkuGOggwk4q6CZA9YXFKu_AAJBFQACXd3xStgQmC0scGyBJAQ" #
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -64,46 +43,45 @@ def func(message):
     if(message.text == "❤️‍🔥 WhatsApp ❤️‍🔥"):
         bot.send_document(message.chat.id, whatsapp)     
     elif(message.text == "😈 VK 😈"):
-        bot.send_document(message.chat.id, vk, caption=caption.vkd)        
+        bot.send_document(message.chat.id, files.vk, caption=caption.vkd)        
     elif(message.text == '📷 Instagram 📷'):
-        bot.send_document(message.chat.id, inst, caption=caption.instd)        
+        bot.send_document(message.chat.id, files.inst, caption=caption.instd)        
     elif(message.text == "🛩 TG 🛩"):
-        bot.send_document(message.chat.id, tg, caption=caption.tgd)
+        bot.send_document(message.chat.id, files.tg, caption=caption.tgd)
     elif(message.text == "🎶 Spotify 🎶"):
-        bot.send_document(message.chat.id, spotify, caption=caption.spd)
+        bot.send_document(message.chat.id, files.spotify, caption=caption.spd)
     elif(message.text == "🏠 Launcher 🏠"):
-        bot.send_document(message.chat.id, launcher, caption=caption.ld)
+        bot.send_document(message.chat.id, files.launcher, caption=caption.ld)
     elif(message.text == "🎵 TikTok 🎵"):
-        bot.send_document(message.chat.id, tt, caption=caption.ttd)
+        bot.send_document(message.chat.id, files.tt, caption=caption.ttd)
     elif(message.text == "🕙 Clock 🕙"):
-        bot.send_document(message.chat.id, clock, caption=caption.cld)
+        bot.send_document(message.chat.id, files.clock, caption=caption.cld)
     elif(message.text == "😍 Status Bar 😍"):
-        bot.send_document(message.chat.id, statusbar, caption=caption.sbd)
+        bot.send_document(message.chat.id, files.statusbar, caption=caption.sbd)
     elif(message.text == "📷 Camera 📷"):
-        bot.send_document(message.chat.id, camera, caption=caption.cad)
+        bot.send_document(message.chat.id, files.camera, caption=caption.cad)
     elif(message.text == "🔢 Calculator 🔢"):
-        bot.send_document(message.chat.id, calc, caption=caption.calcd)
+        bot.send_document(message.chat.id, files.calc, caption=caption.calcd)
     elif(message.text == "🖼️ Gallery 🖼️"):
-        bot.send_document(message.chat.id, gallery, caption=caption.gald)
+        bot.send_document(message.chat.id, files.gallery, caption=caption.gald)
     elif(message.text == "🎤 Диктофон 🎤"):
-        bot.send_document(message.chat.id, voice, caption=caption.voiced)
+        bot.send_document(message.chat.id, files.voice, caption=caption.voiced)
     elif(message.text == "📆 Календарь 📆"):
-        bot.send_document(message.chat.id, clnd, caption=caption.clndd)
+        bot.send_document(message.chat.id, files.clnd, caption=caption.clndd)
     elif(message.text == "💭 Messages 💭"):
-        bot.send_document(message.chat.id, msg, caption=caption.msgd)
+        bot.send_document(message.chat.id, files.msg, caption=caption.msgd)
     elif(message.text == "🙍‍♂️ Контакты 🙍‍♂️"):
-        bot.send_document(message.chat.id, contacts, caption=caption.cntd)
+        bot.send_document(message.chat.id, files.contacts, caption=caption.cntd)
     elif(message.text == "📞 Call 📞"):
-        bot.send_document(message.chat.id, call, caption=caption.calld)
+        bot.send_document(message.chat.id, files.call, caption=caption.calld)
     elif(message.text == "🎧 Music 🎧"):
-        bot.send_document(message.chat.id, music, caption=caption.msd)
+        bot.send_document(message.chat.id, files.music, caption=caption.msd)
     elif(message.text == "⌨️ Keyboard ⌨️"):
-        bot.send_document(message.chat.id, kb, caption=caption.kbd)
+        bot.send_document(message.chat.id, files.kb, caption=caption.kbd)
     elif(message.text == "📒 Notes 📒"):
-        bot.send_document(message.chat.id, notes, caption=caption.ntd)
+        bot.send_document(message.chat.id, files.notes, caption=caption.ntd)
     elif(message.text == "📩 Notifications  📩"):
         bot.send_document(message.chat.id, files.notify, caption=caption.ntf)
-
 
     elif(message.text == "⚒ Инфо 🛠"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
