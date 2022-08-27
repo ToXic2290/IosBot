@@ -41,7 +41,7 @@ def start(message):
 @bot.message_handler(content_types=['text'])
 def func(message):
     if(message.text == "❤️‍🔥 WhatsApp ❤️‍🔥"):
-        bot.send_document(message.chat.id, whatsapp)     
+        bot.send_document(message.chat.id, files.whatsapp)     
     elif(message.text == "😈 VK 😈"):
         bot.send_document(message.chat.id, files.vk, caption=caption.vkd)        
     elif(message.text == '📷 Instagram 📷'):
