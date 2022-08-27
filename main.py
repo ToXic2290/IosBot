@@ -137,6 +137,16 @@ def func(message):
         markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
         markup.add(btn13)
         bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню произошел успешно 😊'''.format(message.from_user), reply_markup=markup)
+    
+    elif message.text.lower() == 'привет':
+        bot.send_message(message.chat.id, 'Привет! Ваше имя добавлено в базу данных!')
+        
+        us_id = message.from_user.id
+        us_name = message.from_user.first_name
+        us_sname = message.from_user.last_name
+        username = message.from_user.username
+        
+        db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
     else:
         bot.send_message(message.chat.id, text="😔 Простите, но.. я не знаю что вам ответить на это...")
      
@@ -148,17 +158,6 @@ def func(message):
 
 
 
-@bot.message_handler(content_types=['text'])
-def get_text_messages(message):
-    if message.text.lower() == 'привет':
-        bot.send_message(message.chat.id, 'Привет! Ваше имя добавлено в базу данных!')
-        
-        us_id = message.from_user.id
-        us_name = message.from_user.first_name
-        us_sname = message.from_user.last_name
-        username = message.from_user.username
-        
-        db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 
-  
+
 bot.infinity_polling()
