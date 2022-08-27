@@ -20,11 +20,9 @@ def start(message):
     btn7 = types.KeyboardButton("🎶 Spotify 🎶")
     btn8 = types.KeyboardButton("😍 Status Bar 😍")
     btn9 = types.KeyboardButton("🔢 Calculator 🔢")
-    btn10 = types.KeyboardButton("📷 Camera 📷")
     btn13 = types.KeyboardButton("⚒ Инфо 🛠")
     btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
     btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
-    btn16 = types.KeyboardButton("📆 Календарь 📆")
     btn17 = types.KeyboardButton("💭 Messages 💭")
     btn18 = types.KeyboardButton("🙍‍♂️ Контакты 🙍‍♂️")
     btn19 = types.KeyboardButton("📞 Call 📞")
@@ -33,7 +31,7 @@ def start(message):
     btn22 = types.KeyboardButton("📒 Notes 📒")
     btn23 = types.KeyboardButton("📩 Notifications  📩")
     btn25 = types.KeyboardButton("❤️‍🔥 WhatsApp ❤️‍🔥")
-    markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
+    markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn14, btn15, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
     markup.add(btn13)
     bot.send_message(message.chat.id, text='''🙃 Приветствую дорогой пользователь.
 Выбери понравившейся приложение ниже'''.format(message.from_user), reply_markup=markup)
@@ -60,16 +58,12 @@ def func(message):
         bot.send_document(message.chat.id, files.clock, caption=caption.cld)
     elif(message.text == "😍 Status Bar 😍"):
         bot.send_document(message.chat.id, files.statusbar, caption=caption.sbd)
-    elif(message.text == "📷 Camera 📷"):
-        bot.send_document(message.chat.id, files.camera, caption=caption.cad)
     elif(message.text == "🔢 Calculator 🔢"):
         bot.send_document(message.chat.id, files.calc, caption=caption.calcd)
     elif(message.text == "🖼️ Gallery 🖼️"):
         bot.send_document(message.chat.id, files.gallery, caption=caption.gald)
     elif(message.text == "🎤 Диктофон 🎤"):
         bot.send_document(message.chat.id, files.voice, caption=caption.voiced)
-    elif(message.text == "📆 Календарь 📆"):
-        bot.send_document(message.chat.id, files.clnd, caption=caption.clndd)
     elif(message.text == "💭 Messages 💭"):
         bot.send_document(message.chat.id, files.msg, caption=caption.msgd)
     elif(message.text == "🙍‍♂️ Контакты 🙍‍♂️"):
@@ -113,11 +107,9 @@ def func(message):
         btn7 = types.KeyboardButton("🎶 Spotify 🎶")
         btn8 = types.KeyboardButton("😍 Status Bar 😍")
         btn9 = types.KeyboardButton("🔢 Calculator 🔢")
-        btn10 = types.KeyboardButton("📷 Camera 📷")
         btn13 = types.KeyboardButton("⚒ Инфо 🛠")
         btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
         btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
-        btn16 = types.KeyboardButton("📆 Календарь 📆")
         btn17 = types.KeyboardButton("💭 Messages 💭")
         btn18 = types.KeyboardButton("🙍‍♂️ Контакты 🙍‍♂️")
         btn19 = types.KeyboardButton("📞 Call 📞")
@@ -126,7 +118,7 @@ def func(message):
         btn22 = types.KeyboardButton("📒 Notes 📒")
         btn23 = types.KeyboardButton("📩 Notifications  📩")
         btn25 = types.KeyboardButton("❤️‍🔥 WhatsApp ❤️‍🔥")
-        markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
+        markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn14, btn15, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
         markup.add(btn13)
         bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню произошел успешно 😊'''.format(message.from_user), reply_markup=markup)
     else:
