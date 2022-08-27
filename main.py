@@ -48,13 +48,13 @@ def start(message):
 
 
     us_id = message.from_user.id
-        us_name = message.from_user.first_name
-        us_sname = message.from_user.last_name
-        username = message.from_user.username
+    us_name = message.from_user.first_name
+    us_sname = message.from_user.last_name
+    username = message.from_user.username
         
-        db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
+    db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
 
-        
+
 @bot.message_handler(content_types=['text'])
 def func(message):
     if(message.text == "❤️‍🔥 WhatsApp ❤️‍🔥"):
