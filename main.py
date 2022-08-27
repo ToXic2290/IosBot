@@ -47,13 +47,6 @@ def start(message):
 Выбери понравившейся приложение ниже'''.format(message.from_user), reply_markup=markup)
 
 
-    us_id = message.from_user.id
-    us_name = message.from_user.first_name
-    us_sname = message.from_user.last_name
-    username = message.from_user.username
-        
-    db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
-
 
 @bot.message_handler(content_types=['text'])
 def func(message):
@@ -108,6 +101,15 @@ def func(message):
         back = types.KeyboardButton("⛺️ Домой")
         markup.add(btn1, btn3, btn4, back)
         bot.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
+
+
+        us_id = message.from_user.id
+        us_name = message.from_user.first_name
+        us_sname = message.from_user.last_name
+        username = message.from_user.username
+        
+        db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
+
 
     elif(message.text == "🫠 Биография"):
         bot.send_message(message.chat.id, caption.bio)
