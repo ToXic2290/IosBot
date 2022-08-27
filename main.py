@@ -20,6 +20,7 @@ def start(message):
     btn7 = types.KeyboardButton("🎶 Spotify 🎶")
     btn8 = types.KeyboardButton("😍 Status Bar 😍")
     btn9 = types.KeyboardButton("🔢 Calculator 🔢")
+    btn10 = types.KeyboardButton("🔐 iLock 🔐")
     btn13 = types.KeyboardButton("⚒ Инфо 🛠")
     btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
     btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
@@ -31,7 +32,7 @@ def start(message):
     btn22 = types.KeyboardButton("📒 Notes 📒")
     btn23 = types.KeyboardButton("📩 Notifications  📩")
     btn25 = types.KeyboardButton("❤️‍🔥 WhatsApp ❤️‍🔥")
-    markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn14, btn15, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
+    markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn14, btn15, btn17, btn18, btn19, btn20, btn21, btn22, btn10, btn23)
     markup.add(btn13)
     bot.send_message(message.chat.id, text='''🙃 Приветствую дорогой пользователь.
 Выбери понравившейся приложение ниже'''.format(message.from_user), reply_markup=markup)
@@ -43,7 +44,9 @@ def func(message):
     if(message.text == "❤️‍🔥 WhatsApp ❤️‍🔥"):
         bot.send_document(message.chat.id, files.whatsapp)     
     elif(message.text == "😈 VK 😈"):
-        bot.send_document(message.chat.id, files.vk, caption=caption.vkd)        
+        bot.send_document(message.chat.id, files.vk, caption=caption.vkd)
+    elif(message.text == "🔐 iLock 🔐"):
+        bot.send_document(message.chat.id, files.ilock, caption=caption.ilockd)  
     elif(message.text == '📷 Instagram 📷'):
         bot.send_document(message.chat.id, files.inst, caption=caption.instd)        
     elif(message.text == "🛩 TG 🛩"):
@@ -107,6 +110,7 @@ def func(message):
         btn7 = types.KeyboardButton("🎶 Spotify 🎶")
         btn8 = types.KeyboardButton("😍 Status Bar 😍")
         btn9 = types.KeyboardButton("🔢 Calculator 🔢")
+        btn10 = types.KeyboardButton("🔐 iLock 🔐")
         btn13 = types.KeyboardButton("⚒ Инфо 🛠")
         btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
         btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
@@ -118,7 +122,7 @@ def func(message):
         btn22 = types.KeyboardButton("📒 Notes 📒")
         btn23 = types.KeyboardButton("📩 Notifications  📩")
         btn25 = types.KeyboardButton("❤️‍🔥 WhatsApp ❤️‍🔥")
-        markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn14, btn15, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
+        markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn14, btn15, btn17, btn18, btn19, btn20, btn21, btn22, btn10, btn23)
         markup.add(btn13)
         bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню произошел успешно 😊'''.format(message.from_user), reply_markup=markup)
     else:
