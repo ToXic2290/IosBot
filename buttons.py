@@ -1,1 +1,1 @@
-wwatsapp = "❤️‍🔥 WhatsApp ❤️‍🔥"
+wwatsapp = "❤️‍🔥 WhatsApp ❤️‍🔥" 
