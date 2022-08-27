@@ -21,6 +21,7 @@ def start(message):
     btn8 = types.KeyboardButton("😍 Status Bar 😍")
     btn9 = types.KeyboardButton("🔢 Calculator 🔢")
     btn10 = types.KeyboardButton("🔐 iLock 🔐")
+    btn11 = types.KeyboardButton("🧭 iCompass 🧭")
     btn13 = types.KeyboardButton("⚒ Инфо 🛠")
     btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
     btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
@@ -81,6 +82,8 @@ def func(message):
         bot.send_document(message.chat.id, files.notes, caption=caption.ntd)
     elif(message.text == "📩 Notifications  📩"):
         bot.send_document(message.chat.id, files.notify, caption=caption.ntf)
+    elif(message.text == "🧭 iCompass 🧭"):
+        bot.send_document(message.caht.id, files.cmps, caption=caption.cmpsd)
 
     elif(message.text == "⚒ Инфо 🛠"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
