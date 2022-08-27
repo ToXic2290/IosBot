@@ -3,6 +3,7 @@ from time import sleep
 import telebot
 from telebot import types # для указание типов
 import caption
+import files
 
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
 
@@ -27,7 +28,6 @@ call = "BQACAgIAAxkBAAIBHWKiWsVehg34DAh8J2X-9uUbgt_PAAKSEgACGQzgSF3rSxfM7jWYJAQ"
 music = "BQACAgIAAxkBAAIBHmKiWuj9fmGA3Jk5Lvqa_VIDFHkpAAJ1EAACWMBQS0MMzkrmzwX-JAQ" #
 kb = "BQACAgIAAxkBAAIBH2KiWw_CqPeAkVABaO47gd6PjldLAAIpFAAC6UlQSQm9ntnXvwlrJAQ" #
 notes = "BQACAgIAAxkBAAIBIGKiWzYkuGOggwk4q6CZA9YXFKu_AAJBFQACXd3xStgQmC0scGyBJAQ" #
-notify = "BQACAgIAAxkBAAIBIWKiW2jdp7iJzj4AAY-XwFriknLXuQACKhYAAl3d8UrboeWRu3ovsiQE" #
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -102,7 +102,7 @@ def func(message):
     elif(message.text == "📒 Notes 📒"):
         bot.send_document(message.chat.id, notes, caption=caption.ntd)
     elif(message.text == "📩 Notifications  📩"):
-        bot.send_document(message.chat.id, notify, caption=caption.ntf)
+        bot.send_document(message.chat.id, files.notify, caption=caption.ntf)
 
 
     elif(message.text == "⚒ Инфо 🛠"):
