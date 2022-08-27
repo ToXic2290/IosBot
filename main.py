@@ -103,13 +103,6 @@ def func(message):
         bot.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
 
 
-        us_id = message.from_user.id
-        us_name = message.from_user.first_name
-        us_sname = message.from_user.last_name
-        username = message.from_user.username
-        
-        db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
-
 
     elif(message.text == "🫠 Биография"):
         bot.send_message(message.chat.id, caption.bio)
@@ -146,5 +139,26 @@ def func(message):
         bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню произошел успешно 😊'''.format(message.from_user), reply_markup=markup)
     else:
         bot.send_message(message.chat.id, text="😔 Простите, но.. я не знаю что вам ответить на это...")
-       
+     
+
+
+
+
+
+
+
+
+@bot.message_handler(content_types=['text'])
+def get_text_messages(message):
+    if message.text.lower() == 'привет':
+        bot.send_message(message.chat.id, 'Привет! Ваше имя добавлено в базу данных!')
+        
+        us_id = message.from_user.id
+        us_name = message.from_user.first_name
+        us_sname = message.from_user.last_name
+        username = message.from_user.username
+        
+        db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
+
+  
 bot.infinity_polling()
