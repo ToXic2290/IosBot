@@ -115,6 +115,7 @@ def func(message):
         btn9 = types.KeyboardButton("🔢 Calculator 🔢")
         btn10 = types.KeyboardButton("🔐 iLock 🔐")
         btn13 = types.KeyboardButton("⚒ Инфо 🛠")
+        btn11 = types.KeyboardButton("🧭 iCompass 🧭")
         btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
         btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
         btn17 = types.KeyboardButton("💭 Messages 💭")
