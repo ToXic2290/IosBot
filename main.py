@@ -4,16 +4,8 @@ import telebot
 from telebot import types # для указание типов
 import caption
 import files
-import sqlite3
 
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
-
-conn = sqlite3.connect('db/database.db', check_same_thread=False)
-cursor = conn.cursor()
-
-def db_table_val(user_id: int, user_name: str, user_surname: str, username: str):
-    cursor.execute('INSERT INTO test (user_id, user_name, user_surname, username) VALUES (?, ?, ?, ?)', (user_id, user_name, user_surname, username))
-    conn.commit()
 
 
 @bot.message_handler(commands=['start'])
@@ -137,16 +129,6 @@ def func(message):
         markup.add(btn25, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn10, btn14, btn15, btn16, btn17, btn18, btn19, btn20, btn21, btn22, btn23)
         markup.add(btn13)
         bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню произошел успешно 😊'''.format(message.from_user), reply_markup=markup)
-    
-    elif message.text.lower() == 'привет':
-        bot.send_message(message.chat.id, 'Привет! Ваше имя добавлено в базу данных!')
-        
-        us_id = message.from_user.id
-        us_name = message.from_user.first_name
-        us_sname = message.from_user.last_name
-        username = message.from_user.username
-        
-        db_table_val(user_id=us_id, user_name=us_name, user_surname=us_sname, username=username)
     else:
         bot.send_message(message.chat.id, text="😔 Простите, но.. я не знаю что вам ответить на это...")
      
