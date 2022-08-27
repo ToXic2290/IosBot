@@ -83,7 +83,7 @@ def func(message):
     elif(message.text == "📩 Notifications  📩"):
         bot.send_document(message.chat.id, files.notify, caption=caption.ntf)
     elif(message.text == "🧭 iCompass 🧭"):
-        bot.send_document(message.caht.id, files.cmps, caption=caption.cmpsd)
+        bot.send_document(message.chat.id, files.cmps, caption=caption.cmpsd)
 
     elif(message.text == "⚒ Инфо 🛠"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
