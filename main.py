@@ -116,6 +116,26 @@ def func(message):
         bot.send_document(message.chat.id, files.cmps, caption=caption.cmpsd)
 
     elif(message.text == "⚒ 𝕀𝕟𝕗𝕠 🛠"):
+
+        connect = sqlite3.connect('users.db')
+        cursor = connect.cursor()
+
+        cursor.execute("""CREATE TABLE IF NOT EXISTS login_id(
+            id INTEGER
+        )""")
+
+        connect.commit()
+
+        people_id = message.chat.id
+        cursor.execute(f"SELECT id FROM login_id WHERE id = {people_id}")
+        data = cursor.fetchone()
+        if data is None:
+            users_list = [message.chat.id]
+            cursor.execute("INSERT INTO login_id VALUES(?);", users_list)
+            connect.commit()
+        else:
+            pass
+
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("🫠 Биография")
         btn3 = types.KeyboardButton("🔗 Социальные сети")
@@ -123,8 +143,6 @@ def func(message):
         back = types.KeyboardButton("⛺️ Домой")
         markup.add(btn1, btn3, btn4, back)
         bot.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
-
-
 
     elif(message.text == "🫠 Биография"):
         bot.send_message(message.chat.id, caption.bio)
