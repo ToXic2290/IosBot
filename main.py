@@ -10,6 +10,26 @@ bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
 
 @bot.message_handler(commands=['start'])
 def start(message):
+    connect = sqlite3.connect('users.db')
+    cursor = connect.cursor()
+
+    cursor.execute("""CREATE TABLE IF NOT EXISTS login_id(
+        id INTEGER
+    )""")
+
+    connect.commit()
+
+    people_id = message.chat.id
+    cursor.execute(f"SELECT id FROM login_id WHERE id = {people_id}")
+    data = cursor.fetchone()
+    if data is None:
+        users_list = [message.chat.id]
+        cursor.execute("INSERT INTO login_id VALUES(?);", users_list)
+        connect.commit()
+    else:
+        pass
+
+    
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("😈 𝕍𝕜 😈")
     btn2 = types.KeyboardButton("💎 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 💎")
