@@ -11,27 +11,27 @@ bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
 @bot.message_handler(commands=['start'])
 def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    btn1 = types.KeyboardButton("😈 VK 😈")
-    btn2 = types.KeyboardButton("🛩 TG 🛩")
-    btn3 = types.KeyboardButton("🎵 TikTok 🎵")
-    btn4 = types.KeyboardButton('📷 Instagram 📷')
-    btn5 = types.KeyboardButton("🏠 Launcher 🏠")
-    btn6 = types.KeyboardButton("🕙 Clock 🕙")
-    btn7 = types.KeyboardButton("🎶 Spotify 🎶")
-    btn8 = types.KeyboardButton("😍 Status Bar 😍")
-    btn9 = types.KeyboardButton("🔢 Calculator 🔢")
-    btn10 = types.KeyboardButton("🔐 iLock 🔐")
-    btn11 = types.KeyboardButton("🧭 iCompass 🧭")
-    btn13 = types.KeyboardButton("⚒ Инфо 🛠")
-    btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
-    btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
-    btn17 = types.KeyboardButton("💭 Messages 💭")
-    btn18 = types.KeyboardButton("🙍‍♂️ Контакты 🙍‍♂️")
-    btn19 = types.KeyboardButton("📞 Call 📞")
-    btn20 = types.KeyboardButton("🎧 Music 🎧")
-    btn21 = types.KeyboardButton("⌨️ Keyboard ⌨️")
-    btn22 = types.KeyboardButton("📒 Notes 📒")
-    btn23 = types.KeyboardButton("📩 Notifications  📩")
+    btn1 = types.KeyboardButton("😈 𝕍𝕜 😈")
+    btn2 = types.KeyboardButton("💎 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 💎")
+    btn3 = types.KeyboardButton("🎵 𝕋𝕚𝕜𝕋𝕠𝕜 🎵")
+    btn4 = types.KeyboardButton('🎡 𝕀𝕟𝕤𝕥𝕒𝕘𝕣𝕒𝕞 🎡')
+    btn5 = types.KeyboardButton("🏠 𝕃𝕒𝕦𝕟𝕔𝕙𝕖𝕣 🏠")
+    btn6 = types.KeyboardButton("⏰ ℂ𝕝𝕠𝕔𝕜 ⏰")
+    btn7 = types.KeyboardButton("🎶 𝕊𝕡𝕠𝕥𝕚𝕗𝕪 🎶")
+    btn8 = types.KeyboardButton("😍 𝕊𝕥𝕒𝕥𝕦𝕤 𝔹𝕒𝕣 😍")
+    btn9 = types.KeyboardButton("🧷 ℂ𝕒𝕝𝕔𝕦𝕝𝕒𝕥𝕠𝕣 🧷")
+    btn10 = types.KeyboardButton("🔐 𝕚𝕃𝕠𝕔𝕜 🔐")
+    btn11 = types.KeyboardButton("🧭 𝕚ℂ𝕠𝕞𝕡𝕒𝕤𝕤 🧭")
+    btn13 = types.KeyboardButton("⚒ 𝕀𝕟𝕗𝕠 🛠")
+    btn14 = types.KeyboardButton("🖼️ 𝔾𝕒𝕝𝕝𝕖𝕣𝕪 🖼️")
+    btn15 = types.KeyboardButton("🎤 𝕚𝕍𝕠𝕚𝕔𝕖 🎤")
+    btn17 = types.KeyboardButton("💭 𝕄𝕖𝕤𝕤𝕒𝕘𝕖𝕤 💭")
+    btn18 = types.KeyboardButton("🙍‍♂️ ℂ𝕠𝕟𝕥𝕒𝕔𝕥𝕤 🙍‍♂️")
+    btn19 = types.KeyboardButton("📱 ℂ𝕒𝕝𝕝𝕤 📱")
+    btn20 = types.KeyboardButton("🎧 𝕄𝕦𝕤𝕚𝕔 🎧")
+    btn21 = types.KeyboardButton("⌨️ 𝕂𝕖𝕪𝕓𝕠𝕒𝕣𝕕 ⌨️")
+    btn22 = types.KeyboardButton("📒 ℕ𝕠𝕥𝕖𝕤 📒")
+    btn23 = types.KeyboardButton("💌 ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤 💌")
     btn25 = types.KeyboardButton("❤️‍🔥𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡❤️‍🔥")
     markup.add(btn25)
     markup.add(btn3, btn7)
@@ -53,48 +53,48 @@ def start(message):
 def func(message):
     if(message.text == "❤️‍🔥𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡❤️‍🔥"):
         bot.send_document(message.chat.id, files.whatsapp)     
-    elif(message.text == "😈 VK 😈"):
+    elif(message.text == "😈 𝕍𝕜 😈"):
         bot.send_document(message.chat.id, files.vk, caption=caption.vkd)
-    elif(message.text == "🔐 iLock 🔐"):
+    elif(message.text == "🔐 𝕚𝕃𝕠𝕔𝕜 🔐"):
         bot.send_document(message.chat.id, files.ilock, caption=caption.ilockd)  
-    elif(message.text == '📷 Instagram 📷'):
+    elif(message.text == '🎡 𝕀𝕟𝕤𝕥𝕒𝕘𝕣𝕒𝕞 🎡'):
         bot.send_document(message.chat.id, files.inst, caption=caption.instd)        
-    elif(message.text == "🛩 TG 🛩"):
+    elif(message.text == "💎 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 💎"):
         bot.send_document(message.chat.id, files.tg, caption=caption.tgd)
-    elif(message.text == "🎶 Spotify 🎶"):
+    elif(message.text == "🎶 𝕊𝕡𝕠𝕥𝕚𝕗𝕪 🎶"):
         bot.send_document(message.chat.id, files.spotify, caption=caption.spd)
-    elif(message.text == "🏠 Launcher 🏠"):
+    elif(message.text == "🏠 𝕃𝕒𝕦𝕟𝕔𝕙𝕖𝕣 🏠"):
         bot.send_document(message.chat.id, files.launcher, caption=caption.ld)
-    elif(message.text == "🎵 TikTok 🎵"):
+    elif(message.text == "🎵 𝕋𝕚𝕜𝕋𝕠𝕜 🎵"):
         bot.send_document(message.chat.id, files.tt, caption=caption.ttd)
-    elif(message.text == "🕙 Clock 🕙"):
+    elif(message.text == "⏰ ℂ𝕝𝕠𝕔𝕜 ⏰"):
         bot.send_document(message.chat.id, files.clock, caption=caption.cld)
-    elif(message.text == "😍 Status Bar 😍"):
+    elif(message.text == "😍 𝕊𝕥𝕒𝕥𝕦𝕤 𝔹𝕒𝕣 😍"):
         bot.send_document(message.chat.id, files.statusbar, caption=caption.sbd)
-    elif(message.text == "🔢 Calculator 🔢"):
+    elif(message.text == "🧷 ℂ𝕒𝕝𝕔𝕦𝕝𝕒𝕥𝕠𝕣 🧷"):
         bot.send_document(message.chat.id, files.calc, caption=caption.calcd)
-    elif(message.text == "🖼️ Gallery 🖼️"):
+    elif(message.text == "🖼️ 𝔾𝕒𝕝𝕝𝕖𝕣𝕪 🖼️"):
         bot.send_document(message.chat.id, files.gallery, caption=caption.gald)
-    elif(message.text == "🎤 Диктофон 🎤"):
+    elif(message.text == "🎤 𝕚𝕍𝕠𝕚𝕔𝕖 🎤"):
         bot.send_document(message.chat.id, files.voice, caption=caption.voiced)
-    elif(message.text == "💭 Messages 💭"):
+    elif(message.text == "💭 𝕄𝕖𝕤𝕤𝕒𝕘𝕖𝕤 💭"):
         bot.send_document(message.chat.id, files.msg, caption=caption.msgd)
-    elif(message.text == "🙍‍♂️ Контакты 🙍‍♂️"):
+    elif(message.text == "🙍‍♂️ ℂ𝕠𝕟𝕥𝕒𝕔𝕥𝕤 🙍‍♂️"):
         bot.send_document(message.chat.id, files.contacts, caption=caption.cntd)
-    elif(message.text == "📞 Call 📞"):
+    elif(message.text == "📱 ℂ𝕒𝕝𝕝𝕤 📱"):
         bot.send_document(message.chat.id, files.call, caption=caption.calld)
-    elif(message.text == "🎧 Music 🎧"):
+    elif(message.text == "🎧 𝕄𝕦𝕤𝕚𝕔 🎧"):
         bot.send_document(message.chat.id, files.music, caption=caption.msd)
-    elif(message.text == "⌨️ Keyboard ⌨️"):
+    elif(message.text == "⌨️ 𝕂𝕖𝕪𝕓𝕠𝕒𝕣𝕕 ⌨️"):
         bot.send_document(message.chat.id, files.kb, caption=caption.kbd)
-    elif(message.text == "📒 Notes 📒"):
+    elif(message.text == "📒 ℕ𝕠𝕥𝕖𝕤 📒"):
         bot.send_document(message.chat.id, files.notes, caption=caption.ntd)
-    elif(message.text == "📩 Notifications  📩"):
+    elif(message.text == "💌 ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤 💌"):
         bot.send_document(message.chat.id, files.notify, caption=caption.ntf)
-    elif(message.text == "🧭 iCompass 🧭"):
+    elif(message.text == "🧭 𝕚ℂ𝕠𝕞𝕡𝕒𝕤𝕤 🧭"):
         bot.send_document(message.chat.id, files.cmps, caption=caption.cmpsd)
 
-    elif(message.text == "⚒ Инфо 🛠"):
+    elif(message.text == "⚒ 𝕀𝕟𝕗𝕠 🛠"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("🫠 Биография")
         btn3 = types.KeyboardButton("🔗 Социальные сети")
@@ -113,27 +113,27 @@ def func(message):
         bot.send_message(message.chat.id, caption.soc)
     elif (message.text == "⛺️ Домой"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-        btn1 = types.KeyboardButton("😈 VK 😈")
-        btn2 = types.KeyboardButton("🛩 TG 🛩")
-        btn3 = types.KeyboardButton("🎵 TikTok 🎵")
-        btn4 = types.KeyboardButton('📷 Instagram 📷')
-        btn5 = types.KeyboardButton("🏠 Launcher 🏠")
-        btn6 = types.KeyboardButton("🕙 Clock 🕙")
-        btn7 = types.KeyboardButton("🎶 Spotify 🎶")
-        btn8 = types.KeyboardButton("😍 Status Bar 😍")
-        btn9 = types.KeyboardButton("🔢 Calculator 🔢")
-        btn10 = types.KeyboardButton("🔐 iLock 🔐")
-        btn13 = types.KeyboardButton("⚒ Инфо 🛠")
-        btn11 = types.KeyboardButton("🧭 iCompass 🧭")
-        btn14 = types.KeyboardButton("🖼️ Gallery 🖼️")
-        btn15 = types.KeyboardButton("🎤 Диктофон 🎤")
-        btn17 = types.KeyboardButton("💭 Messages 💭")
-        btn18 = types.KeyboardButton("🙍‍♂️ Контакты 🙍‍♂️")
-        btn19 = types.KeyboardButton("📞 Call 📞")
-        btn20 = types.KeyboardButton("🎧 Music 🎧")
-        btn21 = types.KeyboardButton("⌨️ Keyboard ⌨️")
-        btn22 = types.KeyboardButton("📒 Notes 📒")
-        btn23 = types.KeyboardButton("📩 Notifications  📩")
+        btn1 = types.KeyboardButton("😈 𝕍𝕜 😈")
+        btn2 = types.KeyboardButton("💎 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 💎")
+        btn3 = types.KeyboardButton("🎵 𝕋𝕚𝕜𝕋𝕠𝕜 🎵")
+        btn4 = types.KeyboardButton('🎡 𝕀𝕟𝕤𝕥𝕒𝕘𝕣𝕒𝕞 🎡')
+        btn5 = types.KeyboardButton("🏠 𝕃𝕒𝕦𝕟𝕔𝕙𝕖𝕣 🏠")
+        btn6 = types.KeyboardButton("⏰ ℂ𝕝𝕠𝕔𝕜 ⏰")
+        btn7 = types.KeyboardButton("🎶 𝕊𝕡𝕠𝕥𝕚𝕗𝕪 🎶")
+        btn8 = types.KeyboardButton("😍 𝕊𝕥𝕒𝕥𝕦𝕤 𝔹𝕒𝕣 😍")
+        btn9 = types.KeyboardButton("🧷 ℂ𝕒𝕝𝕔𝕦𝕝𝕒𝕥𝕠𝕣 🧷")
+        btn10 = types.KeyboardButton("🔐 𝕚𝕃𝕠𝕔𝕜 🔐")
+        btn13 = types.KeyboardButton("⚒ 𝕀𝕟𝕗𝕠 🛠")
+        btn11 = types.KeyboardButton("🧭 𝕚ℂ𝕠𝕞𝕡𝕒𝕤𝕤 🧭")
+        btn14 = types.KeyboardButton("🖼️ 𝔾𝕒𝕝𝕝𝕖𝕣𝕪 🖼️")
+        btn15 = types.KeyboardButton("🎤 𝕚𝕍𝕠𝕚𝕔𝕖 🎤")
+        btn17 = types.KeyboardButton("💭 𝕄𝕖𝕤𝕤𝕒𝕘𝕖𝕤 💭")
+        btn18 = types.KeyboardButton("🙍‍♂️ ℂ𝕠𝕟𝕥𝕒𝕔𝕥𝕤 🙍‍♂️")
+        btn19 = types.KeyboardButton("📱 ℂ𝕒𝕝𝕝𝕤 📱")
+        btn20 = types.KeyboardButton("🎧 𝕄𝕦𝕤𝕚𝕔 🎧")
+        btn21 = types.KeyboardButton("⌨️ 𝕂𝕖𝕪𝕓𝕠𝕒𝕣𝕕 ⌨️")
+        btn22 = types.KeyboardButton("📒 ℕ𝕠𝕥𝕖𝕤 📒")
+        btn23 = types.KeyboardButton("💌 ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤 💌")
         btn25 = types.KeyboardButton("❤️‍🔥𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡❤️‍🔥")
         markup.add(btn25)
         markup.add(btn3, btn7)
