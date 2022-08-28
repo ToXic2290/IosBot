@@ -42,7 +42,8 @@ def start(message):
     markup.add(btn21, btn23, btn17)
     markup.add(btn5, btn10)
     markup.add(btn22)
-    markup.add(btn14, btn15, btn20, btn11)
+    markup.add(btn11)
+    markup.add(btn14, btn15, btn20)
     markup.add(btn13)
     bot.send_message(message.chat.id, text=caption.welcome.format(message.from_user), reply_markup=markup)
 
@@ -143,7 +144,8 @@ def func(message):
         markup.add(btn21, btn23, btn17)
         markup.add(btn5, btn10)
         markup.add(btn22)
-        markup.add(btn14, btn15, btn20, btn11)
+        markup.add(btn11)
+        markup.add(btn14, btn15, btn20)
         markup.add(btn13)
         bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню прошел успешно 😊'''.format(message.from_user), reply_markup=markup)
     else:
