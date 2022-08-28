@@ -92,7 +92,7 @@ def func(message):
         btn4 = types.KeyboardButton("💸 Донат")
         back = types.KeyboardButton("⛺️ Домой")
         markup.add(btn1, btn3, btn4, back)
-        bot.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
+        bot.send_message(message.chat.id, text=caption.welcome, reply_markup=markup)
 
 
 
