@@ -5,7 +5,7 @@ from telebot import types # для указание типов
 import caption
 import files
 
-bot = telebot.TeleBot(5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA)
+bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
 
 
 @bot.message_handler(commands=['start'])
