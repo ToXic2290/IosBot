@@ -6,9 +6,10 @@ import caption
 import files
 import sqlite3
 
-bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
+# Авторизация в бота
+bot = telebot.TeleBot("токен")
 
-
+# Команда старт и запись айди в базу данных
 @bot.message_handler(commands=['start'])
 def start(message):
     connect = sqlite3.connect('users.db')
@@ -30,7 +31,7 @@ def start(message):
     else:
         pass
 
-    
+    # кнопочки
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("😈 𝕍𝕜 😈")
     btn2 = types.KeyboardButton("💎 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 💎")
@@ -69,7 +70,7 @@ def start(message):
     bot.send_message(message.chat.id, text=caption.welcome.format(message.from_user), reply_markup=markup)
 
 
-
+    # действия на кнопочки
 @bot.message_handler(content_types=['text'])
 def func(message):
     if(message.text == "❤️‍🔥𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡❤️‍🔥"):
@@ -114,7 +115,9 @@ def func(message):
         bot.send_document(message.chat.id, files.notify, caption=caption.ntf)
     elif(message.text == "🧭 𝕚ℂ𝕠𝕞𝕡𝕒𝕤𝕤 🧭"):
         bot.send_document(message.chat.id, files.cmps, caption=caption.cmpsd)
+    
 
+    # инфа обо мне и повторная попытка записи в бд если человек не нажимал старт после обновы
     elif(message.text == "⚒ 𝕀𝕟𝕗𝕠 🛠"):
 
         connect = sqlite3.connect('users.db')
@@ -197,7 +200,5 @@ def func(message):
 
 
 
-
-
-
+# вечная работа бота
 bot.infinity_polling()
