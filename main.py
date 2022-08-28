@@ -31,7 +31,7 @@ def start(message):
     btn20 = types.KeyboardButton("🎧 𝕄𝕦𝕤𝕚𝕔 🎧")
     btn21 = types.KeyboardButton("⌨️ 𝕂𝕖𝕪𝕓𝕠𝕒𝕣𝕕 ⌨️")
     btn22 = types.KeyboardButton("📒 ℕ𝕠𝕥𝕖𝕤 📒")
-    btn23 = types.KeyboardButton("💌 ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤 💌")
+    btn23 = types.KeyboardButton("💌ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤💌")
     btn25 = types.KeyboardButton("❤️‍🔥𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡❤️‍🔥")
     markup.add(btn25)
     markup.add(btn3, btn7)
@@ -89,7 +89,7 @@ def func(message):
         bot.send_document(message.chat.id, files.kb, caption=caption.kbd)
     elif(message.text == "📒 ℕ𝕠𝕥𝕖𝕤 📒"):
         bot.send_document(message.chat.id, files.notes, caption=caption.ntd)
-    elif(message.text == "💌 ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤 💌"):
+    elif(message.text == "💌ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤💌"):
         bot.send_document(message.chat.id, files.notify, caption=caption.ntf)
     elif(message.text == "🧭 𝕚ℂ𝕠𝕞𝕡𝕒𝕤𝕤 🧭"):
         bot.send_document(message.chat.id, files.cmps, caption=caption.cmpsd)
@@ -133,7 +133,7 @@ def func(message):
         btn20 = types.KeyboardButton("🎧 𝕄𝕦𝕤𝕚𝕔 🎧")
         btn21 = types.KeyboardButton("⌨️ 𝕂𝕖𝕪𝕓𝕠𝕒𝕣𝕕 ⌨️")
         btn22 = types.KeyboardButton("📒 ℕ𝕠𝕥𝕖𝕤 📒")
-        btn23 = types.KeyboardButton("💌 ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤 💌")
+        btn23 = types.KeyboardButton("💌ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤💌")
         btn25 = types.KeyboardButton("❤️‍🔥𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡❤️‍🔥")
         markup.add(btn25)
         markup.add(btn3, btn7)
