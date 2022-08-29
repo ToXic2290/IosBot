@@ -69,53 +69,53 @@ def start(message):
     markup.add(btn11)
     markup.add(btn14, btn15, btn20)
     markup.add(btn13)
-    bot.send_message(message.chat.id, text=caption.welcome.format(message.from_user), reply_markup=markup)
+    client.send_message(message.chat.id, text=caption.welcome.format(message.from_user), reply_markup=markup)
 
     # действия на кнопочки
 @client.message_handler(content_types=['text'])
 def func(message):
     if(message.text == "❤️‍🔥𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡❤️‍🔥"):
-        bot.send_document(message.chat.id, files.whatsapp)     
+        client.send_document(message.chat.id, files.whatsapp)     
     elif(message.text == "😈 𝕍𝕜 😈"):
-        bot.send_document(message.chat.id, files.vk, caption=caption.vkd)
+        client.send_document(message.chat.id, files.vk, caption=caption.vkd)
     elif(message.text == "🔐 𝕚𝕃𝕠𝕔𝕜 🔐"):
-        bot.send_document(message.chat.id, files.ilock, caption=caption.ilockd)  
+        client.send_document(message.chat.id, files.ilock, caption=caption.ilockd)  
     elif(message.text == '🎡 𝕀𝕟𝕤𝕥𝕒𝕘𝕣𝕒𝕞 🎡'):
-        bot.send_document(message.chat.id, files.inst, caption=caption.instd)        
+        client.send_document(message.chat.id, files.inst, caption=caption.instd)        
     elif(message.text == "💎 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 💎"):
-        bot.send_document(message.chat.id, files.tg, caption=caption.tgd)
+        client.send_document(message.chat.id, files.tg, caption=caption.tgd)
     elif(message.text == "🎶 𝕊𝕡𝕠𝕥𝕚𝕗𝕪 🎶"):
-        bot.send_document(message.chat.id, files.spotify, caption=caption.spd)
+        client.send_document(message.chat.id, files.spotify, caption=caption.spd)
     elif(message.text == "🏠 𝕃𝕒𝕦𝕟𝕔𝕙𝕖𝕣 🏠"):
-        bot.send_document(message.chat.id, files.launcher, caption=caption.ld)
+        client.send_document(message.chat.id, files.launcher, caption=caption.ld)
     elif(message.text == "🎵 𝕋𝕚𝕜𝕋𝕠𝕜 🎵"):
-        bot.send_document(message.chat.id, files.tt, caption=caption.ttd)
+        client.send_document(message.chat.id, files.tt, caption=caption.ttd)
     elif(message.text == "⏰ ℂ𝕝𝕠𝕔𝕜 ⏰"):
-        bot.send_document(message.chat.id, files.clock, caption=caption.cld)
+        client.send_document(message.chat.id, files.clock, caption=caption.cld)
     elif(message.text == "😍 𝕊𝕥𝕒𝕥𝕦𝕤 𝔹𝕒𝕣 😍"):
-        bot.send_document(message.chat.id, files.statusbar, caption=caption.sbd)
+        client.send_document(message.chat.id, files.statusbar, caption=caption.sbd)
     elif(message.text == "🧷 ℂ𝕒𝕝𝕔𝕦𝕝𝕒𝕥𝕠𝕣 🧷"):
-        bot.send_document(message.chat.id, files.calc, caption=caption.calcd)
+        client.send_document(message.chat.id, files.calc, caption=caption.calcd)
     elif(message.text == "🖼️ 𝔾𝕒𝕝𝕝𝕖𝕣𝕪 🖼️"):
-        bot.send_document(message.chat.id, files.gallery, caption=caption.gald)
+        client.send_document(message.chat.id, files.gallery, caption=caption.gald)
     elif(message.text == "🎤 𝕚𝕍𝕠𝕚𝕔𝕖 🎤"):
-        bot.send_document(message.chat.id, files.voice, caption=caption.voiced)
+        client.send_document(message.chat.id, files.voice, caption=caption.voiced)
     elif(message.text == "💭 𝕄𝕖𝕤𝕤𝕒𝕘𝕖𝕤 💭"):
-        bot.send_document(message.chat.id, files.msg, caption=caption.msgd)
+        client.send_document(message.chat.id, files.msg, caption=caption.msgd)
     elif(message.text == "🙍‍♂️ ℂ𝕠𝕟𝕥𝕒𝕔𝕥𝕤 🙍‍♂️"):
-        bot.send_document(message.chat.id, files.contacts, caption=caption.cntd)
+        client.send_document(message.chat.id, files.contacts, caption=caption.cntd)
     elif(message.text == "📱 ℂ𝕒𝕝𝕝𝕤 📱"):
-        bot.send_document(message.chat.id, files.call, caption=caption.calld)
+        client.send_document(message.chat.id, files.call, caption=caption.calld)
     elif(message.text == "🎧 𝕄𝕦𝕤𝕚𝕔 🎧"):
-        bot.send_document(message.chat.id, files.music, caption=caption.msd)
+        client.send_document(message.chat.id, files.music, caption=caption.msd)
     elif(message.text == "⌨️ 𝕂𝕖𝕪𝕓𝕠𝕒𝕣𝕕 ⌨️"):
-        bot.send_document(message.chat.id, files.kb, caption=caption.kbd)
+        client.send_document(message.chat.id, files.kb, caption=caption.kbd)
     elif(message.text == "📒 ℕ𝕠𝕥𝕖𝕤 📒"):
-        bot.send_document(message.chat.id, files.notes, caption=caption.ntd)
+        client.send_document(message.chat.id, files.notes, caption=caption.ntd)
     elif(message.text == "💌ℕ𝕠𝕥𝕚𝕗𝕚𝕔𝕒𝕥𝕚𝕠𝕟𝕤💌"):
-        bot.send_document(message.chat.id, files.notify, caption=caption.ntf)
+        client.send_document(message.chat.id, files.notify, caption=caption.ntf)
     elif(message.text == "🧭 𝕚ℂ𝕠𝕞𝕡𝕒𝕤𝕤 🧭"):
-        bot.send_document(message.chat.id, files.cmps, caption=caption.cmpsd)
+        client.send_document(message.chat.id, files.cmps, caption=caption.cmpsd)
     
 
     # инфа обо мне и повторная попытка записи в бд если человек не нажимал старт после обновы
@@ -146,14 +146,14 @@ def func(message):
         btn4 = types.KeyboardButton("💸 Донат")
         back = types.KeyboardButton("⛺️ Домой")
         markup.add(btn1, btn3, btn4, back)
-        bot.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
+        client.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
 
     elif(message.text == "🫠 Биография"):
-        bot.send_message(message.chat.id, caption.bio)
+        client.send_message(message.chat.id, caption.bio)
     elif message.text == "💸 Донат":
-        bot.send_message(message.chat.id, caption.donate)
+        client.send_message(message.chat.id, caption.donate)
     elif message.text == "🔗 Социальные сети":
-        bot.send_message(message.chat.id, caption.soc)
+        client.send_message(message.chat.id, caption.soc)
     elif (message.text == "⛺️ Домой"):
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
         btn1 = types.KeyboardButton("😈 𝕍𝕜 😈")
@@ -190,9 +190,9 @@ def func(message):
         markup.add(btn11)
         markup.add(btn14, btn15, btn20)
         markup.add(btn13)
-        bot.send_message(message.chat.id, text='''✨ Телепорт в главное меню прошел успешно 😊'''.format(message.from_user), reply_markup=markup)
+        client.send_message(message.chat.id, text='''✨ Телепорт в главное меню прошел успешно 😊'''.format(message.from_user), reply_markup=markup)
     else:
-        bot.send_message(message.chat.id, text="😔 Простите, но.. я не знаю что вам ответить на это...")
+        client.send_message(message.chat.id, text="😔 Простите, но.. я не знаю что вам ответить на это...")
      
 
 
