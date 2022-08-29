@@ -12,7 +12,7 @@ client = telebot.TeleBot(configure.config['token'])
 
 
 # Команда старт и запись айди в базу данных
-@bot.message_handler(commands=['start'])
+@client.message_handler(commands=['start'])
 def start(message):
     connect = sqlite3.connect('users.db')
     cursor = connect.cursor()
@@ -72,7 +72,7 @@ def start(message):
     bot.send_message(message.chat.id, text=caption.welcome.format(message.from_user), reply_markup=markup)
 
     # действия на кнопочки
-@bot.message_handler(content_types=['text'])
+@client.message_handler(content_types=['text'])
 def func(message):
     if(message.text == "❤️‍🔥𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡❤️‍🔥"):
         bot.send_document(message.chat.id, files.whatsapp)     
@@ -200,4 +200,4 @@ def func(message):
 
 
 # вечная работа бота
-bot.infinity_polling()
+client.infinity_polling()
