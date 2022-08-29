@@ -71,6 +71,21 @@ def start(message):
     markup.add(btn13)
     bot.send_message(message.chat.id, text=caption.welcome.format(message.from_user), reply_markup=markup)
 
+    
+@bot.message_handler(commands=['send'])
+def notify(message):
+    command_sender = message.from_user.id
+    if command_sender in admins:
+        with open(r'IosBot/users.db') as ids:
+            for line in ids:
+                user_id = int(line.strip("\n"))
+                try:
+                    bot.send_message(user_id,  f'уведомление от {command_sender}')
+                except Exception as e:
+                    bot.send_message(command_sender, f'ошибка отправки сообщения юзеру - {user_id}')
+    else:
+        bot.send_message(command_sender, f'у вас нет прав для запуска команды')
+
 
     # действия на кнопочки
 @bot.message_handler(content_types=['text'])
@@ -197,27 +212,10 @@ def func(message):
      
 
 
-@bot.message_handler(commands=['send'])
-def notify(message):
-    command_sender = message.from_user.id
-    if command_sender in admins:
-        with open(r'users.db') as ids:
-            for line in ids:
-                user_id = int(line.strip("\n"))
-                try:
-                    bot.send_message(user_id,  f'уведомление от {command_sender}')
-                except Exception as e:
-                    bot.send_message(command_sender, f'ошибка отправки сообщения юзеру - {user_id}')
-    else:
-        bot.send_message(command_sender, f'у вас нет прав для запуска команды')
 
 
 
 
 
 # вечная работа бота
-<<<<<<< HEAD
 bot.infinity_polling()
-=======
-bot.infinity_polling()
->>>>>>> bcf9b00dfdcb77af71839308508dc49ff2accac9
