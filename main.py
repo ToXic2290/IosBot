@@ -5,10 +5,10 @@ from telebot import types # для указание типов
 import caption
 import files
 import sqlite3
+import configure
 
 # Авторизация в бота
-bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
-
+client = telebot.TeleBot(configure.config['token'])
 
 
 # Команда старт и запись айди в базу данных
