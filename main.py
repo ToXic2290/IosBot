@@ -215,7 +215,5 @@ def func(message):
 
 
 
-
-
 # вечная работа бота
 bot.infinity_polling()
