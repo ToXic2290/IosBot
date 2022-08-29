@@ -5,10 +5,10 @@ from telebot import types # для указание типов
 import caption
 import files
 import sqlite3
-import configure
 
 # Авторизация в бота
-bot = telebot.TeleBot(configure.config['token'])
+bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
+
 
 
 # Команда старт и запись айди в базу данных
@@ -149,7 +149,7 @@ def func(message):
         bot.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
 
     elif(message.text == "🫠 Биография"):
-        bot.send_message(message.chat.id, caption.bio, parse_mode='MarkdownV2')
+        bot.send_message(message.chat.id, caption.bio)
     elif message.text == "💸 Донат":
         bot.send_message(message.chat.id, caption.donate)
     elif message.text == "🔗 Социальные сети":
