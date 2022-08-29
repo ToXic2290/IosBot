@@ -6,9 +6,12 @@ import caption
 import files
 import sqlite3
 
+# Авторизация в бота
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
+admins = [1484386024]
 
 
+# Команда старт и запись айди в базу данных
 @bot.message_handler(commands=['start'])
 def start(message):
     connect = sqlite3.connect('users.db')
@@ -30,7 +33,7 @@ def start(message):
     else:
         pass
 
-    
+    # кнопочки
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("😈 𝕍𝕜 😈")
     btn2 = types.KeyboardButton("💎 𝕋𝕖𝕝𝕖𝕘𝕣𝕒𝕞 💎")
@@ -69,7 +72,7 @@ def start(message):
     bot.send_message(message.chat.id, text=caption.welcome.format(message.from_user), reply_markup=markup)
 
 
-
+    # действия на кнопочки
 @bot.message_handler(content_types=['text'])
 def func(message):
     if(message.text == "❤️‍🔥𝕎𝕙𝕒𝕥𝕤𝔸𝕡𝕡❤️‍🔥"):
@@ -114,7 +117,9 @@ def func(message):
         bot.send_document(message.chat.id, files.notify, caption=caption.ntf)
     elif(message.text == "🧭 𝕚ℂ𝕠𝕞𝕡𝕒𝕤𝕤 🧭"):
         bot.send_document(message.chat.id, files.cmps, caption=caption.cmpsd)
+    
 
+    # инфа обо мне и повторная попытка записи в бд если человек не нажимал старт после обновы
     elif(message.text == "⚒ 𝕀𝕟𝕗𝕠 🛠"):
 
         connect = sqlite3.connect('users.db')
@@ -192,12 +197,23 @@ def func(message):
      
 
 
+@bot.message_handler(commands=['send'])
+def notify(message):
+    command_sender = message.from_user.id
+    if command_sender in admins:
+        with open(r'users.db') as ids:
+            for line in ids:
+                user_id = int(line.strip("\n"))
+                try:
+                    bot.send_message(user_id,  f'уведомление от {command_sender}')
+                except Exception as e:
+                    bot.send_message(command_sender, f'ошибка отправки сообщения юзеру - {user_id}')
+    else:
+        bot.send_message(command_sender, f'у вас нет прав для запуска команды')
 
 
 
 
 
-
-
-
+# вечная работа бота
 bot.infinity_polling()
