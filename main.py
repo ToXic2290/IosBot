@@ -9,7 +9,6 @@ from rassilka import *
 
 # Авторизация в бота
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
-admins = [1484386024]
 
 
 # Команда старт и запись айди в базу данных
