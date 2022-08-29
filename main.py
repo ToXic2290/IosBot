@@ -216,8 +216,4 @@ def notify(message):
 
 
 # вечная работа бота
-<<<<<<< HEAD
 bot.infinity_polling()
-=======
-bot.infinity_polling()
->>>>>>> bcf9b00dfdcb77af71839308508dc49ff2accac9
