@@ -71,14 +71,6 @@ def start(message):
     markup.add(btn13)
     bot.send_message(message.chat.id, text=caption.welcome.format(message.from_user), reply_markup=markup)
 
-joinedFile = open("users.db", 'r')
-joinedUsers = set ()   
-
-@bot.message_handler(commands=["special"])
-def mess(message):
-    for user in joinedUsers:
-        bot.send_message(user, message.text[message.text.find(' '):])
-
     # действия на кнопочки
 @bot.message_handler(content_types=['text'])
 def func(message):
