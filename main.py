@@ -149,7 +149,7 @@ def func(message):
         client.send_message(message.chat.id, text="😙 Тут вы можете узнать некоторую информацию о создателе", reply_markup=markup)
 
     elif(message.text == "🫠 Биография"):
-        client.send_message(message.chat.id, caption.bioб parse_mode='MarkdownV2')
+        client.send_message(message.chat.id, caption.bio, parse_mode='MarkdownV2')
     elif message.text == "💸 Донат":
         client.send_message(message.chat.id, caption.donate)
     elif message.text == "🔗 Социальные сети":
