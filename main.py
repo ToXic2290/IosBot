@@ -76,7 +76,7 @@ def start(message):
 def notify(message):
     command_sender = message.from_user.id
     if command_sender in admins:
-        with open(r'C:\users.db') as ids:
+        with open(r'IosBot/users.db') as ids:
             for line in ids:
                 user_id = int(line.strip("\n"))
                 try:
