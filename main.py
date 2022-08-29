@@ -7,9 +7,13 @@ import files
 import sqlite3
 
 # Авторизация в бота
+<<<<<<< HEAD
 bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
 admins = [1484386024]
 
+=======
+bot = telebot.TeleBot("токен")
+>>>>>>> bcf9b00dfdcb77af71839308508dc49ff2accac9
 
 # Команда старт и запись айди в базу данных
 @bot.message_handler(commands=['start'])
@@ -216,4 +220,8 @@ def notify(message):
 
 
 # вечная работа бота
+<<<<<<< HEAD
 bot.infinity_polling()
+=======
+bot.infinity_polling()
+>>>>>>> bcf9b00dfdcb77af71839308508dc49ff2accac9
