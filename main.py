@@ -201,7 +201,7 @@ def func(message):
 def notify(message):
     command_sender = message.from_user.id
     if command_sender in admins:
-        with open(r'users.db') as ids:
+        with open('users.db') as ids:
             for line in ids:
                 user_id = int(line.strip("\n"))
                 try:
