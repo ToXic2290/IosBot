@@ -7,7 +7,7 @@ import files
 import sqlite3
 
 # Авторизация в бота
-bot = telebot.TeleBot("token")
+bot = telebot.TeleBot("5400897291:AAGCWphbUiKx7r1ntjHQNfL75WaWCRk6cvA")
 
 
 
